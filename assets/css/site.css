@@ -328,6 +328,9 @@ p:last-child { margin-bottom: 0; }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+/* Always two columns on wider screens, so four cards sit as an even 2x2. */
+.grid-2x2 { grid-template-columns: 1fr; }
+@media (min-width: 720px) { .grid-2x2 { grid-template-columns: repeat(2, 1fr); } }
 
 .card {
   background: var(--surface);
@@ -410,11 +413,11 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 900px) { .ocr-stage { grid-template-columns: 1.5fr 1fr; } }
 
 .ocr-page {
-  position: relative; border-radius: var(--r); overflow: hidden;
-  border: 1px solid var(--rule); box-shadow: var(--shadow);
-  /* The panel is a manuscript surface: the gradient continues past the SVG so
-     the box reads as one piece of parchment when the grid stretches it. */
-  background: linear-gradient(135deg, #F7F0E1, #F0E6D2 55%, #E8DBC2);
+  position: relative; overflow: visible;
+  filter: drop-shadow(0 10px 22px rgba(20,12,4,.35));
+  /* The SVG draws its own torn, darkened parchment, so the box stays bare
+     and the drop-shadow follows the irregular edge. */
+  background: none;
   display: flex; align-items: center;
 }
 .ocr-page svg { display: block; width: 100%; height: auto; }
@@ -599,7 +602,7 @@ p:last-child { margin-bottom: 0; }
 }
 .htr-box.on { opacity: 1; transform: scale(1); }
 #htr-scan { opacity: 0; will-change: transform; }
-.htr-stain { fill: rgba(150,110,60,.055); }
+.htr-stain { fill: rgba(150,110,60,.07); }
 
 /* ---------- Narrow phones ---------- */
 @media (max-width: 600px) {
