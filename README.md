@@ -22,7 +22,6 @@ index.html            Home — hero, key dates, scope, the "ink to text" demo
 call-for-papers.html  Scope, topics, submission guidelines, proceedings
 program.html          Provisional two-day schedule (tabbed by day)
 committee.html        Organising and program committees
-faq.html              Frequently asked questions
 contact.html          Contact details, venue, travel
 assets/css/site.css   The whole design system — colours, type, components
 assets/js/site.js     Nav, scroll reveals, day tabs, the HTR animation
@@ -54,7 +53,7 @@ Everything unconfirmed is marked in the page with a `To be announced` chip and a
 
 Manuscript images are from the Cairo Genizah Collection, Cambridge University
 Library, via the [Cambridge Digital Library](https://cudl.lib.cam.ac.uk/collections/genizah/1),
-reproduced under CC BY-NC 3.0. Shelfmarks used: T-S 16.100, T-S 12.184,
+reproduced under CC BY-NC 3.0. Shelfmarks used: T-S 12.184,
 T-S 16.378, T-S 20.155. Each is credited beside the image where it appears.
 
 ## Next step
